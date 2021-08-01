@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddEventListeners</title>
+    <style>
+        #div1{
+            margin: 50px;
+            background-color:#ff00ff;
+        }
+        .grandparent{
+            width: 250px;
+            height: 250px;
+            border: solid 20px #0000ff;
+        }
+        .parent{
+            width: 210px;
+            height: 210px;
+            border: solid 20px #00ff00;
+        }
+
+        .child{
+            width: 150px;
+            height: 150px;
+            border: solid 30px #FFFF00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Event Listeners</h1>
+    <h2>Console.log effects</h2>
+    <h2>Click on any of the boxes</h2>
+
+    <div id="div1">
+        <div class="grandparent">
+            <div class="parent">
+                <div class="child"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('div1').addEventListener('click' , function(){
+         console.log(5+5) 
+        });
+
+        document.querySelector('.grandparent').addEventListener('click' , function(){
+        console.log('Grandparent1!')
+        });
+
+        document.querySelector('.child').addEventListener('click' , function(){
+            console.log("child1!")
+        })
+
+        document.querySelector('.parent').addEventListener('click' , function(){
+            console.log('parent1!')
+        })
+    </script>
+</body>
+</html>
